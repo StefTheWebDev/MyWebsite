@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta charset="utf-8">
+        <title>Stefan Dixon</title>
+        <link rel="stylesheet" href="/css/bootstrap.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/font-awesome.min.css" />
+        <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/scss" href="../public/css/styles.scss" />
+   
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+        </script>
+
+    </head>
+<body>
+<div style="background-color: black" id="scroll-body" class="row">
+  <div class="col-lg-12">
+    {{#if success_msg}}
+      <div class="alert alert-success">{{success_msg}}</div>
+    {{/if}}
+
+    {{#if error_msg}}
+      <div class="alert alert-danger">{{error_msg}}</div>
+    {{/if}}
+
+    {{#if error}}
+      <div class="alert alert-danger">{{error}}</div>
+    {{/if}}
+    {{{body}}}
+  </div>
+</div>
+    </body>
+
+  <!-- Footer -->
+<footer style="color:#03A9F4" class="page-footer font-small blue pt-4">
+
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+
+          <!-- Content -->
+          <h5 style="color:#03A9F4" class="text-uppercase">Stefan Dixon</h5>
+          <p style="color:#03A9F4">Be sure to follow my social media to keep up with my work</p>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none pb-3">
+
+
+          <!-- Grid column -->
+          <div class="col-md-3 mb-md-2 mb-5">
+
+            <!-- Links -->
+            <h5 style="color:#03A9F4" class="text-uppercase">Content</h5>
+
+            <ul style="color:#03A9F4" class="list-unstyled">
+              {{#if user}}
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="/posts/all-posts">Blog</a>
+              </li>
+            </ul>
+            {{else}}
+                          <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="/posts/all-posts">Blog</a>
+              </li>
+              <li>
+                <a href="/users/login">Login</a>
+              </li>
+            </ul>
+            {{/if}}
+
+          </div>
+          <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">Website developed and designed by:
+      <a> Stefan Dixon</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+</html>
